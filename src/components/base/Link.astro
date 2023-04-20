@@ -1,7 +1,7 @@
 ---
 const { href, extraClasses } = Astro.props;
+
+const classes = ["text-blue-700 underline", extraClasses].join(" ");
 ---
 
-<a href={href} class={["text-blue-700 underline", extraClasses].join(" ")}>
-  <slot />
-</a>
+<a href={href} class={classes}><slot /></a>

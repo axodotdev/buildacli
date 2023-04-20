@@ -1,6 +1,8 @@
 ---
 import CrateList from "@components/CrateList.vue";
 import Breadcrumbs from "@components/base/Breadcrumbs.astro";
+import Link from "@components/base/Link.astro";
+import Paragraph from "@components/base/Paragraph.astro";
 import Root from "@layouts/Root.astro";
 ---
 
@@ -12,6 +14,14 @@ import Root from "@layouts/Root.astro";
     ]}
   />
   <h1 class="font-serif text-5xl font-bold">Rust CLI crates</h1>
+
+  <Paragraph>
+    Keep in mind that this list is <b>not exhaustive</b>. We mean to only
+    include well-tested and proven crates, or interesting alternatives to
+    current category standards. This includes crates that we ourselves use at
+    <Link href="https://axo.dev">axo</Link> If anyone were to start a new CLI project
+    today, these are the crates we would recommend.
+  </Paragraph>
 
   <CrateList />
 </Root>

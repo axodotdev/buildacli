@@ -19,6 +19,26 @@
       "name": "Structured output",
       "slug": "structout",
       "description": "Helpers for stuff like tables, boxes, anything else fancy you want to display in the terminal."
+    },
+    {
+      "name": "Errors, logging, diagnostics",
+      "slug": "errlog",
+      "description": "The things nobody wants to do (at least in other languages)"
+    },
+    {
+      "name": "Interactivity",
+      "slug": "interactive",
+      "description": "Anything user-facing that does things beside write text to stdout. Interactive prompts, progress bars, and so on."
+    },
+    {
+      "name": "Testing",
+      "slug": "testing",
+      "description": "Testing your CLIs."
+    },
+    {
+      "name": "Other",
+      "slug": "other",
+      "description": "Libraries that don't fit in other categories but are nonetheless extremely useful for CLIs."
     }
   ],
   "crates": [
@@ -27,6 +47,46 @@
       "axo_use": true,
       "categories": ["argparsing", "comgen"],
       "description": "A fully-featured CLI argument parser."
+    },
+    {
+      "name": "lexopt",
+      "categories": ["argparsing"],
+      "description": "Very minimal argument parser, pedantic about correctness."
+    },
+    {
+      "name": "pico-args",
+      "categories": ["argparsing"],
+      "description": "Also very minimal, less pedantic and more ergonomic."
+    },
+    {
+      "name": "console",
+      "axo_use": true,
+      "categories": ["formatting"],
+      "description": "Console abstraction library. Includes a lot of helpful utilities around formatting and aligning text."
+    },
+    {
+      "name": "thiserror",
+      "axo_use": true,
+      "categories": ["errlog"],
+      "description": "Makes casting other errors into your own type(s) much easier. Recommended for libraries."
+    },
+    {
+      "name": "miette",
+      "axo_use": true,
+      "categories": ["errlog"],
+      "description": "Provides a way to report diagnostics and print very well detailed errors."
+    },
+    {
+      "name": "tracing",
+      "axo_use": true,
+      "categories": ["errlog"],
+      "description": "The standard logging library these days. Also supports generating traces, spans, and so on."
+    },
+    {
+      "name": "insta",
+      "axo_use": true,
+      "categories": ["testing"],
+      "description": "Snapshot testing library with good support for snapshotting CLI output."
     }
   ]
 }
