@@ -40,14 +40,17 @@ function sortAxoUp(a, b) {
       target="_blank"
       class="border rounded flex max-w-prose gap-3 items-center p-1 my-2 shadow transition hover:shadow-lg"
     >
-      <CubeIcon class="w-20 text-gray-100 self-start"></CubeIcon>
+      <CubeIcon class="w-20 h-20 text-gray-100 self-start"></CubeIcon>
       <div>
         <h4 class="font-bold font-serif text-lg my-1">{{ crate.name }}</h4>
         <div
           v-if="crate.axo_use"
-          class="text-green-700 font-semibold flex items-center gap-1"
+          class="text-pink-600 font-semibold flex items-center gap-1"
         >
-          <CheckBadgeIcon class="w-5 inline-block"></CheckBadgeIcon>
+          <span
+            class="text-sm bg-clip-text text-transparent bg-gradient-to-br from-pink-300 to-pink-600"
+            >{{ ">o_o<" }}</span
+          >
           <span>Used by axo</span>
         </div>
 
