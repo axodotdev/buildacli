@@ -10,6 +10,12 @@ const categorizedCrates = crates.categories.map((cat) => {
     crates: crates.crates.filter((c) => c.categories.includes(cat.slug)),
   };
 });
+
+function sortAxoUp(a, b) {
+  if (a.axo_use) return -1;
+  if (b.axo_use) return 1;
+  return 0;
+}
 </script>
 
 <template>
@@ -27,11 +33,12 @@ const categorizedCrates = crates.categories.map((cat) => {
       No crates here yet!
     </div>
     <a
-      v-for="crate in categorizedCrates.find((c) => c.slug === category.slug)
-        .crates"
+      v-for="crate in categorizedCrates
+        .find((c) => c.slug === category.slug)
+        .crates.sort(sortAxoUp)"
       :href="`https://crates.io/crates/${crate.name}`"
       target="_blank"
-      class="border rounded flex max-w-prose gap-3 items-center p-1 transition hover:shadow-lg"
+      class="border rounded flex max-w-prose gap-3 items-center p-1 my-2 shadow transition hover:shadow-lg"
     >
       <CubeIcon class="w-20 text-gray-100 self-start"></CubeIcon>
       <div>
