@@ -1,0 +1,32 @@
+{
+  "categories": [
+    {
+      "name": "Argument parsing",
+      "slug": "argparsing",
+      "description": "Crates that focus on taking the arguments to your CLI and turning them into data you can use."
+    },
+    {
+      "name": "Command generation",
+      "slug": "comgen",
+      "description": "Crates that generate command output for you, for example help pages."
+    },
+    {
+      "name": "Formatting",
+      "slug": "formatting",
+      "description": "Helpers to properly format strings in the terminal, to add color, or other things."
+    },
+    {
+      "name": "Structured output",
+      "slug": "structout",
+      "description": "Helpers for stuff like tables, boxes, anything else fancy you want to display in the terminal."
+    }
+  ],
+  "crates": [
+    {
+      "name": "clap",
+      "axo_use": true,
+      "categories": ["argparsing", "comgen"],
+      "description": "A fully-featured CLI argument parser."
+    }
+  ]
+}

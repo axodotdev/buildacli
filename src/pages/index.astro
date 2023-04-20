@@ -1,15 +1,41 @@
 ---
+import Root from "@layouts/Root.astro";
+import Paragraph from "@components/base/Paragraph.astro";
+import Link from "@components/base/Link.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Root>
+  <h1 class="font-serif text-5xl font-bold">Build a CLI in Rust!</h1>
+
+  <Paragraph>
+    Did you know it's really easy to get started with building a CLI in Rust?
+    There are tons of great libraries available for you to choose from, which
+    can sometimes seem a little daunting, but that's what this website is for –
+    to guide you through choosing some fundamental libraries and tools for your
+    next project.
+  </Paragraph>
+
+  <Paragraph size="xl">Jump directly to:</Paragraph>
+
+  <ul class="list-disc text-xl leading-relaxed mx-6">
+    <li><Link href="/crates">Crates for building CLIs</Link></li>
+    <li>
+      <Link extraClasses="text-gray-500 line-through">Tools around CLIs</Link>
+      <div
+        class="-rotate-3 -mt-7 w-max text-sm font-mono bg-yellow-300 p-1 font-bold"
+      >
+        Work in progress!
+      </div>
+    </li>
+    <li>
+      <Link extraClasses="text-gray-500 line-through">
+        Other guides for CLIs
+      </Link>
+      <div
+        class="-rotate-3 w-max -mt-7 text-sm font-mono bg-yellow-300 p-1 font-bold"
+      >
+        Work in progress!
+      </div>
+    </li>
+  </ul>
+</Root>

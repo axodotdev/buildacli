@@ -1,0 +1,20 @@
+---
+import "@fontsource/merriweather";
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title || "Build a CLI in Rust!"}</title>
+  </head>
+  <body>
+    <div class="m-8 md:mx-32 md:my-20">
+      <slot />
+    </div>
+  </body>
+</html>

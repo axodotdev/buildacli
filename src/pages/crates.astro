@@ -1,0 +1,17 @@
+---
+import CrateList from "@components/CrateList.vue";
+import Breadcrumbs from "@components/base/Breadcrumbs.astro";
+import Root from "@layouts/Root.astro";
+---
+
+<Root>
+  <Breadcrumbs
+    labels={[
+      { name: "Home", href: "/" },
+      { name: "Crates", href: "/crates" },
+    ]}
+  />
+  <h1 class="font-serif text-5xl font-bold">Rust CLI crates</h1>
+
+  <CrateList />
+</Root>

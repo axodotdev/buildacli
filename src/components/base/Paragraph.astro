@@ -1,0 +1,7 @@
+---
+const { size } = Astro.props;
+---
+
+<p class={`py-5 leading-relaxed text-${size || "lg"} max-w-prose`}>
+  <slot />
+</p>
